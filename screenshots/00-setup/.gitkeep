@@ -6,3 +6,5 @@ Updated the system packages to ensure the VM was fully patched before installing
 
 ```bash
 sudo apt update && sudo apt upgrade -y
+
+Ubuntu-update.png
