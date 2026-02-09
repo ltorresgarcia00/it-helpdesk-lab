@@ -1,29 +1,21 @@
-# IT Help Desk Lab
-## 🎫 Linux-Based Help Desk Infrastructure (UTM + Ubuntu)
+## 🐧 Ubuntu VM Setup (UTM)
+
+This section documents the initial setup of the Ubuntu virtual machine used as the foundation for the IT Help Desk lab. The VM is hosted using **UTM (QEMU)** on an Apple Silicon Mac and will later be used to deploy a ticketing system and supporting services.
 
 ---
 
-## 📌 Project Overview
-This project simulates a **real-world IT Help Desk environment** using **Ubuntu Linux** running in **UTM (QEMU)** on an Apple Silicon Mac.  
-The lab focuses on building foundational infrastructure used in IT support roles, including system setup, service management, and preparation for a ticketing platform (osTicket).
-
-The goal of this lab is to demonstrate:
-- Linux system administration fundamentals
-- Web service deployment and verification
-- Structured documentation and troubleshooting workflows
-- Skills relevant to Tier 1 / Tier 2 IT Support roles
-
----
-
-## 🛠️ Lab Environment
+### 🛠️ Environment Details
 - **Host OS:** macOS (Apple Silicon)
-- **Virtualization Platform:** UTM (QEMU ARM64)
-- **Guest OS:** Ubuntu Linux 25.10
+- **Virtualization:** UTM (QEMU ARM64)
+- **Guest OS:** Ubuntu 25.10
 - **Network Mode:** Shared (NAT)
-- **Memory Allocation:** 6 GB RAM
-- **Disk Allocation:** ~20 GB virtual disk
+- **Memory:** 6 GB RAM
+- **Disk:** ~20 GB virtual disk
 
 ---
 
-## 🔧 Phase 1: Ubuntu Initial Setup
+### 🔄 System Update & Preparation
+After installation, the system was fully updated to ensure all packages and security patches were current.
 
+```bash
+sudo apt update && sudo apt upgrade -y
