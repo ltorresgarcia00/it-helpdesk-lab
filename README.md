@@ -1,4 +1,4 @@
-# IT Help Desk Ticketing Lab
+# IT Help Desk Ticketing Project
 ## 🎫 osTicket Help Desk System (Ubuntu on UTM)
 
 ---
