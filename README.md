@@ -1,203 +1,192 @@
-# IT Help Desk & Active Directory Project (In Progress)
+# IT Help Desk & Active Directory Project
 ## 🎫 osTicket + Active Directory (Hybrid IT Support Lab)
 
 ---
 
-🎥 Project Walkthrough (3-Minute Demo)
-[Watch Here] (Coming Soon)
-
-
 ## 📌 Overview
 
-This project simulates a real-world **enterprise IT Help Desk environment** using:
+This project simulates a real-world enterprise IT Help Desk environment using:
 
-- **osTicket (Ubuntu Linux)**
-- **Windows Server Active Directory**
-- **Windows 11 Domain-Joined Client**
-- **UTM Virtualization (Apple Silicon)**
+- Windows Server (Active Directory Domain Services)
+- Windows 11 Domain-Joined Client
+- Ubuntu Linux (osTicket Help Desk System)
+- UTM Virtualization (Apple Silicon)
 
-The lab demonstrates how IT support teams receive, triage, escalate, and resolve technical issues involving:
+The lab demonstrates structured Tier 1 / Tier 2 IT support workflows including:
 
-- Active Directory user management
 - Account lockouts and password resets
-- Group-based access control
-- Cloud identity troubleshooting
-- Endpoint and network issues
+- Group-based access control (RBAC)
+- Domain join troubleshooting
+- DNS resolution failures
+- RDP configuration
+- User deprovisioning
+- Security-related investigations
 
-This mirrors real Tier 1 / Tier 2 support workflows used in corporate environments.
+This environment mirrors common support operations in corporate IT departments and managed service providers (MSPs).
 
 ---
 
-## 🛠️ Environment
+## 🏗 Lab Architecture
 
-### 💻 Host System
-- macOS (Apple Silicon – M3)
-- UTM (QEMU ARM64 virtualization)
+The lab environment consists of:
 
-### 🖥 Virtual Machines
-
-**1️⃣ Windows Server (Domain Controller)**
+Windows Server (Domain Controller)
 - Active Directory Domain Services (AD DS)
 - DNS Server
 - Group Policy Management
 
-**2️⃣ Windows 11 Client**
-- Domain-joined device
-- Simulated end-user workstation
+Windows 11 Client
+- Domain-joined workstation
+- Simulated end-user environment
 
-**3️⃣ Ubuntu Linux Server**
-- Apache Web Server
+Ubuntu Linux Server
+- Apache
 - PHP
 - MariaDB
-- osTicket (latest version)
+- osTicket (Ticketing platform)
 
-### ⚙️ Resource Allocation
+All systems operate within a NAT-based virtual network inside UTM.
+
+---
+
+## 🛠 Environment Details
+
+Host System
+- macOS (Apple Silicon – M3)
+- UTM (QEMU ARM64 Virtualization)
+
+Resource Allocation
 - Windows Server: 4–6 GB RAM
 - Windows Client: 4 GB RAM
-- Ubuntu: 4–6 GB RAM
-- Disk: ~20–60 GB per VM
-- Network: NAT (internal lab network)
+- Ubuntu Server: 4–6 GB RAM
+- Disk: 20–60 GB per VM
+- Network Mode: NAT (Internal Lab Network)
 
 ---
 
 ## 🧠 Active Directory Configuration
 
-- Installed and configured **Active Directory Domain Services**
+- Installed and configured Active Directory Domain Services
 - Created:
   - Users
   - Security Groups
   - Organizational Units (OUs)
-- Configured **Group Policy Objects (GPOs)**
+- Implemented Group Policy Objects (GPOs)
+- Configured account lockout policies
 - Simulated:
   - Account lockouts
   - Password resets
-  - Group membership changes
-  - Domain join troubleshooting
+  - Group membership access changes
+  - Domain join failures
   - RDP access permissions
-- Practiced **least privilege and RBAC principles**
+- Applied Least Privilege and Role-Based Access Control (RBAC) principles
 
 ---
 
 ## 🎫 Ticketing System (osTicket)
 
-Deployed osTicket to simulate structured IT support workflows.
+Deployed osTicket on Ubuntu to simulate structured help desk workflows.
 
-### Configurations
+Configuration Performed
 - Created departments (IT Support, Security)
 - Defined agent roles and permissions
 - Configured ticket priorities and SLAs
-- Customized email templates and auto-responses
 - Implemented escalation workflows
+- Customized notification templates
 
 ---
 
 ## 🧪 Example Tickets Handled
 
-### 🔐 Active Directory Issues
+Active Directory
 - User account locked out
 - Password reset requests
-- Group access provisioning
-- OU reassignment
-- GPO-related login issues
+- Security group access provisioning
+- User deprovisioning
 
-### ☁️ Identity & Access Issues
-- MFA login failures
-- Cloud identity access troubleshooting
-- Role-based access control adjustments
+Networking
+- DNS resolution failure
+- Domain join troubleshooting
+- RDP access issues
 
-### 🌐 Network & System Issues
-- DNS resolution failures
-- Slow system performance
-- Application crashes
-- Network connectivity issues
-
-### 🛡 Security-Related Tickets
-- Suspicious login attempt
-- Account compromise investigation
-- Privilege escalation request review
+Security
+- Suspicious login investigation
+- Privilege escalation review
 
 Each ticket included:
-- Detailed issue description
+- Issue description
+- Impact assessment
 - Step-by-step troubleshooting
+- Root cause identification
 - Resolution documentation
-- Escalation notes (if applicable)
 - Closure summary
 
 ---
 
-## 🔑 Skills Demonstrated
+## 🔑 Core Competencies Demonstrated
 
-### 🖥 Systems Administration
-- Windows Server configuration
-- Active Directory management
-- GPO implementation
-- Linux server administration
-
-### 🎫 Help Desk Operations
-- Ticket lifecycle management
-- SLA awareness
-- Tier 1 / Tier 2 escalation processes
-- Technical documentation best practices
-
-### 🔐 Identity & Access Management
-- User provisioning and deprovisioning
-- Group-based access control
-- Account lifecycle management
-- Authentication troubleshooting
-
-### 🌐 Networking
-- DNS troubleshooting
-- Domain authentication flow
-- RDP and remote access configuration
-
-### 🛡 Security Concepts
-- Least privilege
-- Role-based access control (RBAC)
-- Account lockout policies
-- Basic incident triage
+- Active Directory Administration
+- Group Policy Management
+- RBAC Implementation
+- Tier 1 / Tier 2 Troubleshooting
+- Domain Authentication & DNS Diagnostics
+- Linux Server Deployment (LAMP)
+- Ticket Lifecycle Documentation
+- Security Awareness & Incident Triage
 
 ---
 
-## 📸 Screenshots Included
+## 📁 Project Structure
 
-- Windows Server AD configuration
-- Users & Groups management
-- Group Policy setup
-- Domain-joined Windows 11 system
-- Ubuntu system overview
-- osTicket dashboard
-- Sample open/in-progress/resolved tickets
-- SLA and department configuration
+screenshots/
+│
+├── 00-setup/
+├── 01-active-directory/
+├── 02-ticketing/
+└── 03-scenarios/
+
+tickets/
+│
+└── README.md
+
+Each folder documents a specific stage of infrastructure deployment and support workflows.
+
+---
+
+## 🎥 Project Walkthrough
+
+3-minute lab demonstration includes:
+
+- Ticket #001 – Account Lockout Resolution
+- Ticket #003 – Group-Based Access Provisioning
+
+(Video link coming soon)
+
+---
+
+## 📈 Key Takeaways
+
+- Structured troubleshooting reduces resolution time.
+- DNS misconfiguration is a common root cause in domain environments.
+- Group-based access control simplifies permission management.
+- Proper documentation improves escalation and auditing workflows.
 
 ---
 
 ## 🎯 Career Relevance
 
-This lab mirrors real-world workflows used in roles such as:
+This project aligns with responsibilities in roles such as:
 
 - Help Desk Technician
 - IT Support Specialist
 - Service Desk Analyst
 - Desktop Support Technician
 - Junior Systems Administrator
-- SOC Analyst (entry-level)
+- SOC Analyst (Entry-Level)
 
-It demonstrates hands-on experience across:
+It demonstrates hands-on experience with:
 
 - Active Directory environments
 - Ticket-based IT operations
 - Hybrid infrastructure troubleshooting
 - Identity and access management
-
----
-
-## 🚀 Key Takeaway
-
-This project bridges:
-
-Active Directory Administration  
-+ Help Desk Operations  
-+ Linux Server Deployment  
-+ Security Fundamentals  
-
-Providing practical experience aligned with modern IT support and early-career cybersecurity roles.
